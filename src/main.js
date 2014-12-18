@@ -13,14 +13,17 @@ req(["require", 'marioEngine'], function(require, Engine){
 	Engine.onReady(function() {
 
 		function Player () {
+			//this.prototype.constructor.call(this);
+			this.playerProperty = 42;
+
 			// this.super.constructor(arguments);
 		};
 
+		Player.prototype = Engine.getEntityFactory().createEntity('SimpleShape');
 		Player.prototype.test = function(){
 
 		};
 
-		Player.prototype = Engine.getEntityFactory().createEntity('SimpleShape', Player.prototype);
 		console.log( new Player());
 		//var world = Framework.events.
 
