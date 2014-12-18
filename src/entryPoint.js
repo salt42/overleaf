@@ -6,7 +6,7 @@ define(function(require, exports, module)  {
 
     exports.init = function() {
         var core = Engine.getCore();
-            core.setDOM($('#dsadsad'));
+        core.setDOM($('#dsadsad'));
 
         var world = core.createWorld();
         //fill world
@@ -16,6 +16,8 @@ define(function(require, exports, module)  {
         world.addEntity(new BlaEntity());
         world.addEntity(new BlaEntity());
         // ...
+        Engine.getEventManager()
+
         core.setActiveWorld(world);
         core.registerGameLoopTick(1, function() {});
         core.start();
